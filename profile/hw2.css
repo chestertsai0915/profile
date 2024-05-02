@@ -1,0 +1,136 @@
+body, h1, h2, h3, p, ul, ol, dl, dd, dt {
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+header {
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2em;
+}
+
+
+nav {
+    text-align: center;
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0; 
+    margin: 0; 
+}
+
+nav ul li {
+    display: inline-block; 
+    position: relative; 
+}
+
+nav ul li a {
+    display: block; 
+    padding: 10px 20px;
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li ul {
+    display: none; 
+    position: absolute; 
+    top: 100%; 
+    left: 0;
+    background-color: #333;
+}
+
+nav ul li:hover ul {
+    display: block;
+}
+
+nav ul li ul li {
+    display: block; 
+    padding: 10px 20px;
+}
+
+nav ul li ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+nav ul li a:hover,
+nav ul li ul li a:hover {
+    background-color: #555;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px;
+}
+
+aside {
+    flex: 0 0 30%; /* 調整寬度以符合你的需求 */
+}
+
+section.inf {
+    flex: 0 0 65%; 
+    margin-right: 20%;
+}
+
+
+
+section h1 {
+    margin-top: 5px;
+    margin-bottom: 5px;
+   
+}
+
+section dl {
+    margin-left: 20px;
+}
+
+section dl dt {
+    font-weight: bold;
+}
+
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: #fff;
+    clear: both; 
+}
+
+
+@media screen and (max-width: 480px) {
+    nav ul {
+        
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        display: block; 
+        padding: 10px 0;
+    }
+    main{
+        flex-direction: column;
+        max-width: 90%; 
+        margin: 10px auto; 
+    }
+}
